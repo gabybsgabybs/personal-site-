@@ -252,7 +252,7 @@ a.note:hover{text-decoration:underline;transform:translateY(-1px)}
 .flip:nth-child(even)::after{transform:translateX(-50%) rotate(4deg)}
 /* paper keeps its own light palette in both themes */
 .face{--ink:#232620;--ink-2:#5C6157;--line:rgba(35,38,32,.18);--panel:#FFFCF5;--bg:#FBF7EE}
-.flip-in{position:relative;width:100%;height:100%;min-height:500px;transition:transform .7s cubic-bezier(.2,.7,.2,1);transform-style:preserve-3d}
+.flip-in{position:relative;width:100%;height:100%;min-height:500px;transition:transform .7s cubic-bezier(.2,.7,.2,1),min-height .45s ease;transform-style:preserve-3d}
 .flip.flipped .flip-in{transform:rotateY(180deg)}
 @media (prefers-reduced-motion:reduce){.flip-in{transition:none}}
 .face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border:1px solid rgba(35,38,32,.22);border-radius:22px;display:flex;flex-direction:column;overflow:hidden;
@@ -684,7 +684,7 @@ html,body{overflow-x:clip}
     <div class="panel-in">
       <div>
         <h1 id="hero-title">Oi, eu sou a Gabi. Eu crio, escalo e monetizo <em class="rotate" data-words="[&quot;produtos&nbsp;de&nbsp;IA&quot;,&quot;plataformas&quot;,&quot;aplicativos&quot;]" aria-live="polite" aria-atomic="true"><span class="w">produtos&nbsp;de&nbsp;IA</span></em> para mercados&nbsp;globais.</h1>
-        <p class="lede">Catorze anos atuando em empresas globais: Canva, LinkedIn, PayPal, Google e BCG. Liderei produtos em diferentes stacks, incluindo pagamentos, sistemas de plataforma, aplicativos de alta escala e features de IA generativa que milhões de consumidores usam toda semana. Tenho experiência em mercados globais e ênfase no mercado da América Latina.</p>
+        <p class="lede">Catorze anos em Canva, LinkedIn, PayPal, Google e BCG. Liderei produto em toda a stack, de pagamentos, crédito e sistemas de plataforma a features de IA generativa que milhões de consumidores usam toda semana, e lancei tudo isso em mercados onde o padrão não funciona.</p>
         <div class="icons" aria-label="Links">
           <a class="icon" href="https://github.com/gabybsgabybs" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><svg><use href="#i-github"/></svg></a>
           <a class="icon" href="https://www.linkedin.com/in/gabriela-belo" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><svg><use href="#i-linkedin"/></svg></a>
@@ -831,7 +831,7 @@ html,body{overflow-x:clip}
       </div>
       <div class="grid" id="cards">
 
-        <article class="flip" tabindex="0" role="button" aria-pressed="false" aria-label="Quality gate dos efeitos de vídeo com IA generativa. Vire para ver detalhes.">
+        <article class="flip" tabindex="0" role="button" aria-pressed="false" aria-label="Construindo evals para decidir quais efeitos de vídeo com IA são lançados. Vire para ver detalhes.">
           <div class="flip-in">
             <div class="face front">
               <div class="scene"><img class="photo" src="case-evals.jpg" alt="Cachorro com efeito de rosto de Día de Muertos entre flores de cempasúchil" loading="lazy" style="object-position:50% 42%"><svg viewBox="0 0 320 170" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
@@ -844,7 +844,7 @@ html,body{overflow-x:clip}
               </svg></div>
               <div class="front-body">
                 <span class="tag">Case de IA · Canva, 2025</span>
-                <h3>O quality gate dos efeitos de vídeo localizados com IA generativa</h3>
+                <h3>Construindo evals para decidir quais efeitos de vídeo com IA são lançados</h3>
                 <p>Um sistema de avaliação liderado por produto decidiu quais efeitos seriam lançados nos mercados internacionais do Canva.</p>
                 <span class="flip-cta">Vire para ver o case <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 0 1 14-5l2 2M20 4v5h-5"/></svg></span>
               </div>
@@ -852,10 +852,10 @@ html,body{overflow-x:clip}
             <div class="face back">
               <div class="back-body">
                 <div class="star">
-                  <b>Problema</b><span>O Canva estava lançando efeitos de rosto e movimento com IA generativa e relevância local (uma Catrina para o Día de Muertos) para ganhar awareness fora dos mercados de língua inglesa. As falhas eram óbvias para os usuários e invisíveis nas métricas agregadas, e não havia um padrão do que era bom o suficiente para lançar.</span>
-                  <b>Oportunidade</b><span>Cumprir os prazos das campanhas sem colocar um efeito quebrado na frente de novos usuários exatamente nos mercados que o Canva queria conquistar, e dar ao time de IA generativa uma meta clara para melhorar.</span>
-                  <b>Abordagem</b><span>Construí uma rubrica de 7 dimensões com uma decisão binária de Publish Ready e avaliei de 50 a 60 outputs por efeito, centenas no total, como única aprovadora. Decidi lançar com uma limitação conhecida para múltiplos rostos porque as instruções definiam a expectativa de um único rosto e a janela da campanha importava mais.</span>
-                  <b>Resultado</b><span>Os efeitos foram lançados no prazo em todos os mercados, aumentaram a taxa de publicação em 2 p.p. e ficaram entre os principais efeitos de vídeo com IA do Canva. A rubrica virou o handoff para a engenharia: detecção do número de rostos e taxas de aprovação por dimensão que o time pode perseguir.</span>
+                  <b>Contexto</b><span>Nosso time local criou efeitos de vídeo com IA generativa e relevância local, começando por uma Catrina para o Día de Muertos. Com a pressão de tempo da sazonalidade, eu era responsável por garantir que cada efeito atingisse o padrão de qualidade que nossos usuários esperam, a tempo para a data.</span>
+                  <b>Ação</b><span>Construí uma rubrica de 7 dimensões com uma decisão binária de Publish Ready e avaliei de 50 a 60 outputs por efeito, centenas no total, como única aprovadora. Lancei com uma limitação conhecida para múltiplos rostos porque as instruções definiam a expectativa de um único rosto e a janela da campanha importava mais.</span>
+                  <b>Resultado</b><span>Os efeitos foram lançados no prazo em todos os mercados, aumentaram a taxa de publicação em 2 p.p. e ficaram entre os principais efeitos de vídeo com IA do Canva.</span>
+                  <b>Aprendizado</b><span>Mesmo sem notas perfeitas em toda a rubrica, o efeito foi lançado e fez sucesso. O tradeoff entre precisão e timing é real.</span>
                 </div>
                 <div class="chips"><span class="chip">Avaliação de IA generativa</span><span class="chip">Design de rubrica</span><span class="chip">Trust &amp; Safety</span><span class="chip">Decisões de lançamento</span></div>
                 <span class="flip-cta">Voltar</span>
@@ -864,7 +864,7 @@ html,body{overflow-x:clip}
           </div>
         </article>
 
-        <article class="flip" tabindex="0" role="button" aria-pressed="false" aria-label="Dois cliques do tema ao post publicado. Vire para ver detalhes.">
+        <article class="flip" tabindex="0" role="button" aria-pressed="false" aria-label="Desenhando IA generativa para quem não escreve prompts. Vire para ver detalhes.">
           <div class="flip-in">
             <div class="face front">
               <div class="scene"><img class="photo" src="case-bomdia-v2.jpg" alt="O gerador de posts de Bom dia: escolha do tema e o post pronto" loading="lazy" style="object-position:50% 56%"><svg viewBox="0 0 320 170" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
@@ -876,7 +876,7 @@ html,body{overflow-x:clip}
               </svg></div>
               <div class="front-body">
                 <span class="tag">Case de IA · Canva, 2025</span>
-                <h3>Dois cliques do tema ao post publicado</h3>
+                <h3>Desenhando IA generativa para quem não escreve prompts</h3>
                 <p>Uma feature de IA generativa em produção que transforma um tema e uma cor em um post pronto para redes sociais, para pequenos negócios da América Latina.</p>
                 <span class="flip-cta">Vire para ver o case <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 0 1 14-5l2 2M20 4v5h-5"/></svg></span>
               </div>
@@ -884,10 +884,10 @@ html,body{overflow-x:clip}
             <div class="face back">
               <div class="back-body">
                 <div class="star">
-                  <b>Problema</b><span>Donos de pequenos negócios na América Latina publicam as mesmas promoções e saudações toda semana e não querem abrir um editor nem escrever prompts. Menos posts eram publicados; menos pessoas voltavam.</span>
-                  <b>Oportunidade</b><span>Taxa de publicação e retorno na mesma semana são indicadores antecedentes de retenção para milhões de criadores semanais. Pequenos ganhos se acumulam.</span>
-                  <b>Abordagem</b><span>Desenhei uma UI em cima de LLMs: escolha um tema e uma paleta, receba um post pronto. O texto passa por gerar → LLM juiz → filtro humano de tom; as imagens são renderizadas ao vivo a partir de um prompt com slots, regras rígidas de texto e estilos LoRA para variedade. Custo controlado com limites por usuário e créditos de IA por plano.</span>
+                  <b>Contexto</b><span>Donos de pequenos negócios na América Latina publicavam as mesmas promoções e saudações no Instagram toda semana, a partir de templates. Agora não querem mais templates: o prompt virou o novo jeito de criar conteúdo.</span>
+                  <b>Ação</b><span>Desenhei uma UI em cima de LLMs para criar conteúdo frequente e padronizado: escolha um tema e uma paleta, receba um post pronto. O texto passa por gerar → LLM juiz → filtro humano de tom; as imagens são renderizadas ao vivo a partir de um prompt com slots, regras rígidas de texto e estilos LoRA para variedade. Custo controlado com limites por usuário e créditos de IA por plano.</span>
                   <b>Resultado</b><span>O teste A/B aumentou a taxa de publicação em 5% e o retorno na mesma semana em 2% em todos os mercados, a um custo por geração que o negócio consegue sustentar.</span>
+                  <b>Aprendizado</b><span>Para a maioria das pessoas, a melhor UX de IA generativa esconde o prompt. O trabalho de qualidade está no pipeline (juiz, filtro de tom, prompts restritos), não em pedir que os usuários fiquem melhores em prompting.</span>
                 </div>
                 <div class="chips"><span class="chip">Design de pipeline</span><span class="chip">LLM como juiz</span><span class="chip">Engenharia de prompt</span><span class="chip">Custo por geração</span><span class="chip">Testes A/B</span></div>
                 <span class="flip-cta">Voltar</span>
@@ -896,7 +896,7 @@ html,body{overflow-x:clip}
           </div>
         </article>
 
-        <article class="flip" tabindex="0" role="button" aria-pressed="false" aria-label="Um novo SKU em nove países da América Latina. Vire para ver detalhes.">
+        <article class="flip" tabindex="0" role="button" aria-pressed="false" aria-label="Lançando uma linha de produto de US$ 6M de ARR em 9 mercados. Vire para ver detalhes.">
           <div class="flip-in">
             <div class="face front">
               <div class="scene"><img class="photo" src="case-lite.jpg" alt="Seletor de planos do Canva Pro Lite no celular" loading="lazy" style="object-position:50% 44%"><svg viewBox="0 0 320 170" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
@@ -910,7 +910,7 @@ html,body{overflow-x:clip}
               </svg></div>
               <div class="front-body">
                 <span class="tag">Monetização · Canva, 2025</span>
-                <h3>Um novo SKU para usuários avançados em nove países da América Latina</h3>
+                <h3>Lançando uma linha de produto de US$ 6M de ARR em 9 mercados</h3>
                 <p>Empacotamento, preço e distribuição de uma linha de US$ 6M de ARR, incluindo os fluxos nada glamourosos.</p>
                 <span class="flip-cta">Vire para ver o case <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 0 1 14-5l2 2M20 4v5h-5"/></svg></span>
               </div>
@@ -918,10 +918,10 @@ html,body{overflow-x:clip}
             <div class="face back">
               <div class="back-body">
                 <div class="star">
-                  <b>Problema</b><span>Usuários avançados das ferramentas principais de design do Canva na América Latina não tinham um plano compatível com o jeito que usavam o produto nem com o quanto podiam pagar.</span>
-                  <b>Oportunidade</b><span>Uma oportunidade de US$ 6M de ARR em nove países, desde que um novo plano fosse lançado sem quebrar cobrança, cancelamento ou inadimplência.</span>
-                  <b>Abordagem</b><span>Fui dona de empacotamento, preço e comercialização de ponta a ponta, incluindo os fluxos nada glamourosos: inadimplência, cancelamento, upgrades e downgrades, nas moedas e meios de pagamento de nove países.</span>
+                  <b>Contexto</b><span>Usuários avançados das ferramentas principais de design do Canva na América Latina não tinham um plano compatível com o jeito que usavam o produto nem com o quanto podiam pagar: uma oportunidade de US$ 6M de ARR em nove países, desde que um novo plano fosse lançado sem quebrar cobrança, cancelamento ou inadimplência.</span>
+                  <b>Ação</b><span>Fui dona de empacotamento, preço e comercialização de ponta a ponta, incluindo inadimplência, cancelamento, upgrades e downgrades, nas moedas e meios de pagamento de nove países.</span>
                   <b>Resultado</b><span>No ar em 9 países com os fluxos de cobrança, cancelamento e inadimplência intactos, entregando US$ 6M de ARR.</span>
+                  <b>Aprendizado</b><span>Introduzir um plano mais leve, na verdade, fez mais usuários considerarem o nosso plano premium. Psicologia de preços no seu melhor.</span>
                 </div>
                 <div class="chips"><span class="chip">Preço &amp; empacotamento</span><span class="chip">Pagamentos</span><span class="chip">Localização</span><span class="chip">Retenção</span></div>
                 <span class="flip-cta">Voltar</span>
@@ -930,40 +930,7 @@ html,body{overflow-x:clip}
           </div>
         </article>
 
-        <article class="flip" tabindex="0" role="button" aria-pressed="false" aria-label="WhatsApp Publish na América Latina. Vire para ver detalhes.">
-          <div class="flip-in">
-            <div class="face front">
-              <div class="scene"><img class="photo" src="case-whatsapp.jpg" alt="Menu de compartilhamento do Canva no celular com a opção WhatsApp" loading="lazy" style="object-position:50% 72%"><svg viewBox="0 0 320 170" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-                <rect width="320" height="170" fill="var(--blue)" opacity=".3"/>
-                <use href="#s-hills" x="-30" y="84" width="400" height="110"/>
-                <use href="#s-pear" x="30" y="60" width="80" height="80"/>
-                <use href="#s-palm" x="230" y="14" width="56" height="124"/>
-                <path d="M130 70h70a14 14 0 0 1 14 14v22a14 14 0 0 1-14 14h-40l-18 14v-14h-12a14 14 0 0 1-14-14V84a14 14 0 0 1 14-14z" fill="var(--panel)" stroke="var(--ink)" stroke-width="2"/>
-                <circle cx="150" cy="95" r="4" fill="var(--ink)"/><circle cx="167" cy="95" r="4" fill="var(--ink)"/><circle cx="184" cy="95" r="4" fill="var(--ink)"/>
-              </svg></div>
-              <div class="front-body">
-                <span class="tag">Crescimento · Canva, 2025</span>
-                <h3>WhatsApp Publish, da América Latina para o mundo</h3>
-                <p>Lançado na web mobile, onde os pequenos negócios realmente estão, e depois expandido globalmente.</p>
-                <span class="flip-cta">Vire para ver o case <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 0 1 14-5l2 2M20 4v5h-5"/></svg></span>
-              </div>
-            </div>
-            <div class="face back">
-              <div class="back-body">
-                <div class="star">
-                  <b>Problema</b><span>Na América Latina, negócio se faz no WhatsApp, e o fluxo de publicação do Canva na web mobile, onde os pequenos negócios realmente estão, não atendia esses usuários.</span>
-                  <b>Oportunidade</b><span>Remover o último passo entre criar e compartilhar no canal que mais importa, e então provar o case para todos os mercados onde o WhatsApp domina.</span>
-                  <b>Abordagem</b><span>Liderei o rollout nos mercados da América Latina, medi a ativação mercado a mercado e construí o business case para a expansão global.</span>
-                  <b>Resultado</b><span>+185% de publicações via WhatsApp e forte ganho de ativação em todos os mercados. Agora em expansão global.</span>
-                </div>
-                <div class="chips"><span class="chip">Crescimento internacional</span><span class="chip">Web mobile</span><span class="chip">Ativação</span><span class="chip">Lançamento multifuncional</span></div>
-                <span class="flip-cta">Voltar</span>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <article class="flip" tabindex="0" role="button" aria-pressed="false" aria-label="Compras avulsas no LinkedIn mobile. Vire para ver detalhes.">
+        <article class="flip" tabindex="0" role="button" aria-pressed="false" aria-label="Um novo modelo de negócio para pequenos anunciantes no LinkedIn. Vire para ver detalhes.">
           <div class="flip-in">
             <div class="face front">
               <div class="scene"><img class="photo" src="case-otp.jpg" alt="Checkout de boost do LinkedIn com opções de pagamento avulso" loading="lazy" style="object-position:50% 56%"><svg viewBox="0 0 320 170" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
@@ -978,7 +945,7 @@ html,body{overflow-x:clip}
               </svg></div>
               <div class="front-body">
                 <span class="tag">Plataforma · LinkedIn, 2023</span>
-                <h3>Compras avulsas no mobile</h3>
+                <h3>Um novo modelo de negócio para pequenos anunciantes no LinkedIn</h3>
                 <p>Um novo modelo de negócio de plataforma que destravou pequenos anunciantes que nunca assinariam um plano.</p>
                 <span class="flip-cta">Vire para ver o case <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 0 1 14-5l2 2M20 4v5h-5"/></svg></span>
               </div>
@@ -986,10 +953,10 @@ html,body{overflow-x:clip}
             <div class="face back">
               <div class="back-body">
                 <div class="star">
-                  <b>Problema</b><span>A plataforma de negócios do LinkedIn monetizava por assinaturas. Pequenos anunciantes no mobile queriam pagar uma vez e seguir em frente.</span>
-                  <b>Oportunidade</b><span>Um segmento de dezenas de milhões de dólares que um modelo só de assinatura nunca capturaria.</span>
-                  <b>Abordagem</b><span>Redesenhei os sistemas de crédito e finanças do backend com Finanças, Plataforma, Jurídico e Ads; fui dona do roadmap de iOS e Android, incluindo a migração para a nova API de commerce da Apple.</span>
-                  <b>Resultado</b><span>Compras avulsas lançadas nas duas plataformas, um novo modelo de negócio que traz dezenas de milhões de pequenos anunciantes.</span>
+                  <b>Contexto</b><span>O LinkedIn só vendia assinaturas no mobile. Enquanto isso, pequenos anunciantes usavam o celular para criar conteúdo e queriam pagar para impulsionar um post e seguir em frente: um segmento de dezenas de milhões de dólares que um modelo só de assinatura nunca capturaria.</span>
+                  <b>Ação</b><span>Lancei compras avulsas no mobile: redesenhei os sistemas de crédito e finanças do backend com Finanças, Plataforma, Jurídico e Ads e fui dona do roadmap de iOS e Android, incluindo a migração para a nova API de commerce da Apple.</span>
+                  <b>Resultado</b><span>No ar nas duas plataformas, um novo modelo de negócio que traz dezenas de milhões de pequenos anunciantes.</span>
+                  <b>Aprendizado</b><span>Um novo modelo de negócio é, na maior parte, um projeto de backend e compliance com chapéu de produto. O botão de comprar foi a parte fácil; sistemas de crédito, finanças e as regras das lojas de apps definiram o cronograma.</span>
                 </div>
                 <div class="chips"><span class="chip">Pagamentos</span><span class="chip">Modelos de negócio</span><span class="chip">iOS &amp; Android</span><span class="chip">Finanças &amp; Jurídico</span></div>
                 <span class="flip-cta">Voltar</span>
@@ -998,7 +965,7 @@ html,body{overflow-x:clip}
           </div>
         </article>
 
-        <article class="flip" tabindex="0" role="button" aria-pressed="false" aria-label="Pay Later em cinco novos mercados no PayPal. Vire para ver detalhes.">
+        <article class="flip" tabindex="0" role="button" aria-pressed="false" aria-label="Triplicando o Pay Later com expansão internacional. Vire para ver detalhes.">
           <div class="flip-in">
             <div class="face front">
               <div class="scene"><img class="photo" src="case-paylater.jpg" alt="Selo PayPal Pague em 30 dias em uma página de produto" loading="lazy" style="object-position:50% 62%"><svg viewBox="0 0 320 170" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
@@ -1010,7 +977,7 @@ html,body{overflow-x:clip}
               </svg></div>
               <div class="front-body">
                 <span class="tag">Crescimento · PayPal, 2021</span>
-                <h3>Pay Later, cinco novos mercados, três vezes mais transações</h3>
+                <h3>Triplicando o Pay Later com expansão internacional</h3>
                 <p>Adaptação regulatória mercado a mercado e fricção removida do checkout.</p>
                 <span class="flip-cta">Vire para ver o case <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 0 1 14-5l2 2M20 4v5h-5"/></svg></span>
               </div>
@@ -1018,10 +985,10 @@ html,body{overflow-x:clip}
             <div class="face back">
               <div class="back-body">
                 <div class="star">
-                  <b>Problema</b><span>O Pay Later crescia em poucos mercados principais, enquanto cada novo país trazia sua própria regulação de crédito e seus hábitos de checkout.</span>
-                  <b>Oportunidade</b><span>Cinco novos mercados e uma base maior de novos usuários, desde que a conversão no checkout não sofresse.</span>
-                  <b>Abordagem</b><span>Adaptei o produto à regulação de cada mercado, removi fricção do checkout com testes A/B e conduzi discovery para as próximas apostas de crescimento e a visão de longo prazo.</span>
+                  <b>Contexto</b><span>O Pay Later crescia em poucos mercados principais, enquanto cada novo país trazia sua própria regulação de crédito e seus hábitos de checkout. A meta eram cinco novos mercados e uma base maior de novos usuários, sem prejudicar a conversão no checkout.</span>
+                  <b>Ação</b><span>Adaptei o produto à regulação de cada mercado, removi fricção do checkout com testes A/B e conduzi discovery para as próximas apostas de crescimento e a visão de longo prazo.</span>
                   <b>Resultado</b><span>As transações mensais triplicaram (de 2,7M para 8M), o negócio cresceu 50% e a conversão no checkout subiu 25 bps.</span>
+                  <b>Aprendizado</b><span>Regulação é input de produto, não um checkbox jurídico. Desenhar o checkout em torno das regras de cada mercado, em vez de adaptar depois, foi de onde vieram os ganhos de conversão.</span>
                 </div>
                 <div class="chips"><span class="chip">Adaptação regulatória</span><span class="chip">Conversão no checkout</span><span class="chip">Entrada em mercados</span><span class="chip">Visão de produto</span></div>
                 <span class="flip-cta">Voltar</span>
@@ -1185,7 +1152,11 @@ html,body{overflow-x:clip}
 
   /* ---- Flip cards ---- */
   document.querySelectorAll('.flip').forEach(card=>{
-    const toggle=()=>{ const on=card.classList.toggle('flipped'); card.setAttribute('aria-pressed', on?'true':'false'); };
+    const inner=card.querySelector('.flip-in'), back=card.querySelector('.back-body');
+    const fit=()=>{ if(!card.classList.contains('flipped')){ inner.style.minHeight=''; card.style.minHeight=''; return; }
+      const h=Math.max(500, back.scrollHeight+6); inner.style.minHeight=h+'px'; card.style.minHeight=h+'px'; };
+    const toggle=()=>{ const on=card.classList.toggle('flipped'); card.setAttribute('aria-pressed', on?'true':'false'); fit(); };
+    addEventListener('resize', fit);
     card.addEventListener('click', e=>{ if(e.target.closest('a')) return; toggle(); });
     card.addEventListener('keydown', e=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); toggle(); } });
   });

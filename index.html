@@ -252,7 +252,7 @@ a.note:hover{text-decoration:underline;transform:translateY(-1px)}
 .flip:nth-child(even)::after{transform:translateX(-50%) rotate(4deg)}
 /* paper keeps its own light palette in both themes */
 .face{--ink:#232620;--ink-2:#5C6157;--line:rgba(35,38,32,.18);--panel:#FFFCF5;--bg:#FBF7EE}
-.flip-in{position:relative;width:100%;height:100%;min-height:500px;transition:transform .7s cubic-bezier(.2,.7,.2,1);transform-style:preserve-3d}
+.flip-in{position:relative;width:100%;height:100%;min-height:500px;transition:transform .7s cubic-bezier(.2,.7,.2,1),min-height .45s ease;transform-style:preserve-3d}
 .flip.flipped .flip-in{transform:rotateY(180deg)}
 @media (prefers-reduced-motion:reduce){.flip-in{transition:none}}
 .face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border:1px solid rgba(35,38,32,.22);border-radius:22px;display:flex;flex-direction:column;overflow:hidden;
@@ -831,7 +831,7 @@ html,body{overflow-x:clip}
       </div>
       <div class="grid" id="cards">
 
-        <article class="flip" tabindex="0" role="button" aria-pressed="false" aria-label="Quality gate for localized GenAI video effects. Flip for details.">
+        <article class="flip" tabindex="0" role="button" aria-pressed="false" aria-label="Building evals to decide which AI video effects ship. Flip for details.">
           <div class="flip-in">
             <div class="face front">
               <div class="scene"><img class="photo" src="case-evals.jpg" alt="Dog wearing a Día de Muertos face effect among marigolds" loading="lazy" style="object-position:50% 42%"><svg viewBox="0 0 320 170" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
@@ -844,7 +844,7 @@ html,body{overflow-x:clip}
               </svg></div>
               <div class="front-body">
                 <span class="tag">AI case · Canva, 2025</span>
-                <h3>The quality gate for localized GenAI video effects</h3>
+                <h3>Building evals to decide which AI video effects ship</h3>
                 <p>A PM-owned eval system decided which effects shipped to Canva's international markets.</p>
                 <span class="flip-cta">Flip for the case <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 0 1 14-5l2 2M20 4v5h-5"/></svg></span>
               </div>
@@ -852,10 +852,10 @@ html,body{overflow-x:clip}
             <div class="face back">
               <div class="back-body">
                 <div class="star">
-                  <b>Problem</b><span>Canva was launching locally relevant GenAI face and motion effects (a Catrina for Día de Muertos) to win awareness outside English markets. Failures were obvious to users and invisible in aggregate metrics, and there was no bar for what was good enough to ship.</span>
-                  <b>Opportunity</b><span>Hit campaign deadlines without putting a broken effect in front of new users in exactly the markets Canva was trying to win, and give the GenAI team a target to improve against.</span>
-                  <b>Approach</b><span>Built a 7-dimension rubric with a binary Publish Ready call and rated 50 to 60 outputs per effect, hundreds in total, as sole approver. Chose to ship a known multi-face limitation because instructions set a single-face expectation and the campaign window mattered more.</span>
-                  <b>Outcome</b><span>Effects launched on schedule across markets, lifted publish rate 2pp and ranked among Canva's top AI video effects. The rubric became the handoff to engineering: face-count detection and per-dimension pass rates the team can target.</span>
+                  <b>Context</b><span>Our local team created locally relevant GenAI video effects, starting with a Catrina for Día de Muertos. With seasonal time pressure, I was responsible for making sure each effect met the quality bar our users expect, in time for the holiday.</span>
+                  <b>Action</b><span>Built a 7-dimension rubric with a binary Publish Ready call and rated 50–60 outputs per effect, hundreds in total, as sole approver. Shipped a known multi-face limitation because instructions set a single-face expectation and the campaign window mattered more.</span>
+                  <b>Result</b><span>Effects launched on schedule across markets, lifted publish rate 2pp and ranked among Canva's top AI video effects.</span>
+                  <b>Learning</b><span>Even without perfect scores across the rubric, the effect launched and was a success. The tradeoff between accuracy and timing is real.</span>
                 </div>
                 <div class="chips"><span class="chip">GenAI evals</span><span class="chip">Rubric design</span><span class="chip">Trust &amp; Safety</span><span class="chip">Ship decisions</span></div>
                 <span class="flip-cta">Flip back</span>
@@ -864,7 +864,7 @@ html,body{overflow-x:clip}
           </div>
         </article>
 
-        <article class="flip" tabindex="0" role="button" aria-pressed="false" aria-label="Two clicks from theme to published post. Flip for details.">
+        <article class="flip" tabindex="0" role="button" aria-pressed="false" aria-label="Designing GenAI for people who don&#x27;t write prompts. Flip for details.">
           <div class="flip-in">
             <div class="face front">
               <div class="scene"><img class="photo" src="case-bomdia-v2.jpg" alt="The Bom dia post generator: theme picker and the finished post" loading="lazy" style="object-position:50% 56%"><svg viewBox="0 0 320 170" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
@@ -876,7 +876,7 @@ html,body{overflow-x:clip}
               </svg></div>
               <div class="front-body">
                 <span class="tag">AI case · Canva, 2025</span>
-                <h3>Two clicks from theme to published post</h3>
+                <h3>Designing GenAI for people who don't write prompts</h3>
                 <p>A live GenAI feature that turns a theme and a colour into a finished social post for LatAm small businesses.</p>
                 <span class="flip-cta">Flip for the case <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 0 1 14-5l2 2M20 4v5h-5"/></svg></span>
               </div>
@@ -884,10 +884,10 @@ html,body{overflow-x:clip}
             <div class="face back">
               <div class="back-body">
                 <div class="star">
-                  <b>Problem</b><span>LatAm shop owners post the same promos and greetings every week and don't want to open an editor or write prompts. Fewer posts got published; fewer people came back.</span>
-                  <b>Opportunity</b><span>Publish rate and same-week return are leading indicators of retention for millions of weekly creators. Small lifts compound.</span>
-                  <b>Approach</b><span>Designed a UI on top of LLMs: pick a theme and a palette, get a finished post. Copy runs generate → LLM judge → human tone gate; images render live from a slot-based prompt with strict text rules and LoRA styles for variety. Held cost with per-user caps and plan-level AI credits.</span>
-                  <b>Outcome</b><span>A/B test lifted publish rate 5% and same-week return 2% across markets, at a cost per generation the business could sustain.</span>
+                  <b>Context</b><span>LatAm shop owners used to post the same promos and greetings on Instagram every week, built from templates. Now they don't want templates anymore: prompting became the new way to create content.</span>
+                  <b>Action</b><span>Designed a UI on top of LLMs to create high-frequency, standardized content: pick a theme and a palette, get a finished post. Copy runs generate → LLM judge → human tone gate; images render live from a slot-based prompt with strict text rules and LoRA styles for variety. Held cost with per-user caps and plan-level AI credits.</span>
+                  <b>Result</b><span>A/B test lifted publish rate 5% and same-week return 2% across markets, at a cost per generation the business could sustain.</span>
+                  <b>Learning</b><span>For most people the best GenAI UX hides the prompt. The quality work lives in the pipeline (judge, tone gate, constrained prompts), not in asking users to get better at prompting.</span>
                 </div>
                 <div class="chips"><span class="chip">Pipeline design</span><span class="chip">LLM as judge</span><span class="chip">Prompt engineering</span><span class="chip">Cost per generation</span><span class="chip">A/B testing</span></div>
                 <span class="flip-cta">Flip back</span>
@@ -896,7 +896,7 @@ html,body{overflow-x:clip}
           </div>
         </article>
 
-        <article class="flip" tabindex="0" role="button" aria-pressed="false" aria-label="A new SKU in nine LATAM countries. Flip for details.">
+        <article class="flip" tabindex="0" role="button" aria-pressed="false" aria-label="Launching a $6M ARR product line in 9 markets. Flip for details.">
           <div class="flip-in">
             <div class="face front">
               <div class="scene"><img class="photo" src="case-lite.jpg" alt="Canva Pro Lite plan selector on mobile" loading="lazy" style="object-position:50% 44%"><svg viewBox="0 0 320 170" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
@@ -910,7 +910,7 @@ html,body{overflow-x:clip}
               </svg></div>
               <div class="front-body">
                 <span class="tag">Monetisation · Canva, 2025</span>
-                <h3>A new SKU for power users in nine LATAM countries</h3>
+                <h3>Launching a $6M ARR product line in 9 markets</h3>
                 <p>Packaging, pricing and distribution for a $6M ARR line, including the unglamorous flows.</p>
                 <span class="flip-cta">Flip for the case <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 0 1 14-5l2 2M20 4v5h-5"/></svg></span>
               </div>
@@ -918,10 +918,10 @@ html,body{overflow-x:clip}
             <div class="face back">
               <div class="back-body">
                 <div class="star">
-                  <b>Problem</b><span>Power users of Canva's core design tools in Latin America had no plan that matched how they used the product or what they could pay.</span>
-                  <b>Opportunity</b><span>A $6M ARR opportunity across nine countries, if a new tier could launch without breaking billing, cancellation or delinquency behaviour.</span>
-                  <b>Approach</b><span>Owned packaging, pricing and commercialisation end to end, including the unglamorous flows: delinquency, cancellation, upgrades and downgrades, across nine countries' currencies and payment setups.</span>
-                  <b>Outcome</b><span>Live in 9 countries with the billing, cancellation and delinquency flows intact, delivering $6M ARR.</span>
+                  <b>Context</b><span>Power users of Canva's core design tools in Latin America had no plan that matched how they used the product or what they could pay: a $6M ARR opportunity across nine countries, if a new pricing tier could launch without breaking billing, cancellation or delinquency.</span>
+                  <b>Action</b><span>Owned packaging, pricing and commercialisation end to end, including delinquency, cancellation, upgrades and downgrades, across nine countries' currencies and payment setups.</span>
+                  <b>Result</b><span>Live in 9 countries with billing, cancellation and delinquency flows intact, delivering $6M ARR.</span>
+                  <b>Learning</b><span>Introducing a lighter-weight tier actually brought more users to consider our premium plan. Pricing psychology at its best.</span>
                 </div>
                 <div class="chips"><span class="chip">Pricing &amp; packaging</span><span class="chip">Payments</span><span class="chip">Localization</span><span class="chip">Retention</span></div>
                 <span class="flip-cta">Flip back</span>
@@ -930,40 +930,7 @@ html,body{overflow-x:clip}
           </div>
         </article>
 
-        <article class="flip" tabindex="0" role="button" aria-pressed="false" aria-label="WhatsApp Publish across LATAM. Flip for details.">
-          <div class="flip-in">
-            <div class="face front">
-              <div class="scene"><img class="photo" src="case-whatsapp.jpg" alt="Canva mobile share sheet with WhatsApp option" loading="lazy" style="object-position:50% 72%"><svg viewBox="0 0 320 170" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-                <rect width="320" height="170" fill="var(--blue)" opacity=".3"/>
-                <use href="#s-hills" x="-30" y="84" width="400" height="110"/>
-                <use href="#s-pear" x="30" y="60" width="80" height="80"/>
-                <use href="#s-palm" x="230" y="14" width="56" height="124"/>
-                <path d="M130 70h70a14 14 0 0 1 14 14v22a14 14 0 0 1-14 14h-40l-18 14v-14h-12a14 14 0 0 1-14-14V84a14 14 0 0 1 14-14z" fill="var(--panel)" stroke="var(--ink)" stroke-width="2"/>
-                <circle cx="150" cy="95" r="4" fill="var(--ink)"/><circle cx="167" cy="95" r="4" fill="var(--ink)"/><circle cx="184" cy="95" r="4" fill="var(--ink)"/>
-              </svg></div>
-              <div class="front-body">
-                <span class="tag">Growth · Canva, 2025</span>
-                <h3>WhatsApp Publish, from LATAM to the world</h3>
-                <p>Rolled out on mobile web where small businesses actually live, then expanded globally.</p>
-                <span class="flip-cta">Flip for the case <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 0 1 14-5l2 2M20 4v5h-5"/></svg></span>
-              </div>
-            </div>
-            <div class="face back">
-              <div class="back-body">
-                <div class="star">
-                  <b>Problem</b><span>In Latin America, business runs on WhatsApp, and Canva's publish flow on mobile web, where small businesses actually are, did not meet users there.</span>
-                  <b>Opportunity</b><span>Remove the last step between designing and sharing on the channel that matters most, then prove the case for every market where WhatsApp dominates.</span>
-                  <b>Approach</b><span>Led the rollout across LATAM markets, measured activation market by market, and built the business case for global expansion.</span>
-                  <b>Outcome</b><span>+185% WhatsApp publishes and a strong activation lift across markets. Now in global expansion.</span>
-                </div>
-                <div class="chips"><span class="chip">International growth</span><span class="chip">Mobile web</span><span class="chip">Activation</span><span class="chip">Cross-functional launch</span></div>
-                <span class="flip-cta">Flip back</span>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <article class="flip" tabindex="0" role="button" aria-pressed="false" aria-label="One-time purchases on LinkedIn mobile. Flip for details.">
+        <article class="flip" tabindex="0" role="button" aria-pressed="false" aria-label="A new business model for SMB advertisers at LinkedIn. Flip for details.">
           <div class="flip-in">
             <div class="face front">
               <div class="scene"><img class="photo" src="case-otp.jpg" alt="LinkedIn boost checkout with one-time payment options" loading="lazy" style="object-position:50% 56%"><svg viewBox="0 0 320 170" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
@@ -978,7 +945,7 @@ html,body{overflow-x:clip}
               </svg></div>
               <div class="front-body">
                 <span class="tag">Platform · LinkedIn, 2023</span>
-                <h3>One-time purchases on mobile</h3>
+                <h3>A new business model for SMB advertisers at LinkedIn</h3>
                 <p>A new platform business model that unlocked small advertisers who would never commit to a subscription.</p>
                 <span class="flip-cta">Flip for the case <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 0 1 14-5l2 2M20 4v5h-5"/></svg></span>
               </div>
@@ -986,10 +953,10 @@ html,body{overflow-x:clip}
             <div class="face back">
               <div class="back-body">
                 <div class="star">
-                  <b>Problem</b><span>LinkedIn's business platform monetised through subscriptions. Small advertisers on mobile wanted to pay once and move on.</span>
-                  <b>Opportunity</b><span>A tens-of-millions-of-dollars segment that a subscription-only model could never capture.</span>
-                  <b>Approach</b><span>Redesigned backend credit and finance systems with Finance, Platform, Legal and Ads; owned the iOS and Android roadmap, including the migration to Apple's new commerce API.</span>
-                  <b>Outcome</b><span>One-time purchases launched on both platforms, a new business model that brings tens of millions from small advertisers.</span>
+                  <b>Context</b><span>LinkedIn was only selling subscriptions on mobile. Meanwhile, small advertisers were using their phones to create content and wanted to pay to promote a post and move on: a tens-of-millions-of-dollars segment a subscription-only model could never capture.</span>
+                  <b>Action</b><span>Launched one-time purchases on mobile: redesigned backend credit and finance systems with Finance, Platform, Legal and Ads, and owned the iOS and Android roadmap, including the migration to Apple's new commerce API.</span>
+                  <b>Result</b><span>Live on both platforms, a new business model that brings tens of millions from small advertisers.</span>
+                  <b>Learning</b><span>A new business model is mostly a backend and compliance project wearing a product hat. The buy button was the easy part; credit systems, finance and app-store rules set the timeline.</span>
                 </div>
                 <div class="chips"><span class="chip">Payments</span><span class="chip">Business models</span><span class="chip">iOS &amp; Android</span><span class="chip">Finance &amp; Legal</span></div>
                 <span class="flip-cta">Flip back</span>
@@ -998,7 +965,7 @@ html,body{overflow-x:clip}
           </div>
         </article>
 
-        <article class="flip" tabindex="0" role="button" aria-pressed="false" aria-label="Pay Later in five new markets at PayPal. Flip for details.">
+        <article class="flip" tabindex="0" role="button" aria-pressed="false" aria-label="Tripling Pay Later through international expansion. Flip for details.">
           <div class="flip-in">
             <div class="face front">
               <div class="scene"><img class="photo" src="case-paylater.jpg" alt="PayPal Pay in 30 days badge on a product page" loading="lazy" style="object-position:50% 62%"><svg viewBox="0 0 320 170" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
@@ -1010,7 +977,7 @@ html,body{overflow-x:clip}
               </svg></div>
               <div class="front-body">
                 <span class="tag">Growth · PayPal, 2021</span>
-                <h3>Pay Later, five new markets, three times the transactions</h3>
+                <h3>Tripling Pay Later through international expansion</h3>
                 <p>Market-by-market regulatory adaptation and checkout friction removed.</p>
                 <span class="flip-cta">Flip for the case <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 0 1 14-5l2 2M20 4v5h-5"/></svg></span>
               </div>
@@ -1018,10 +985,10 @@ html,body{overflow-x:clip}
             <div class="face back">
               <div class="back-body">
                 <div class="star">
-                  <b>Problem</b><span>Pay Later was growing in a few core markets, while every new country brought its own credit regulation and checkout habits.</span>
-                  <b>Opportunity</b><span>Five new markets and a larger first-time user base, provided checkout conversion did not suffer.</span>
-                  <b>Approach</b><span>Adapted the product to each market's regulation, removed checkout friction through A/B tests, and ran discovery for the next growth bets and the long-term vision.</span>
-                  <b>Outcome</b><span>Monthly transactions tripled (2.7M to 8M), the business grew 50%, and checkout conversion rose 25 bps.</span>
+                  <b>Context</b><span>Pay Later was growing in a few core markets, while every new country brought its own credit regulation and checkout habits. The goal was five new markets and a larger first-time user base without hurting checkout conversion.</span>
+                  <b>Action</b><span>Adapted the product to each market's regulation, removed checkout friction through A/B tests, and ran discovery for the next growth bets and the long-term vision.</span>
+                  <b>Result</b><span>Monthly transactions tripled (2.7M to 8M), the business grew 50%, and checkout conversion rose 25 bps.</span>
+                  <b>Learning</b><span>Regulation is a product input, not a legal checkbox. Designing the checkout around each market's rules, rather than retrofitting, is where the conversion gains came from.</span>
                 </div>
                 <div class="chips"><span class="chip">Regulatory adaptation</span><span class="chip">Checkout conversion</span><span class="chip">Market entry</span><span class="chip">Product vision</span></div>
                 <span class="flip-cta">Flip back</span>
@@ -1185,7 +1152,11 @@ html,body{overflow-x:clip}
 
   /* ---- Flip cards ---- */
   document.querySelectorAll('.flip').forEach(card=>{
-    const toggle=()=>{ const on=card.classList.toggle('flipped'); card.setAttribute('aria-pressed', on?'true':'false'); };
+    const inner=card.querySelector('.flip-in'), back=card.querySelector('.back-body');
+    const fit=()=>{ if(!card.classList.contains('flipped')){ inner.style.minHeight=''; card.style.minHeight=''; return; }
+      const h=Math.max(500, back.scrollHeight+6); inner.style.minHeight=h+'px'; card.style.minHeight=h+'px'; };
+    const toggle=()=>{ const on=card.classList.toggle('flipped'); card.setAttribute('aria-pressed', on?'true':'false'); fit(); };
+    addEventListener('resize', fit);
     card.addEventListener('click', e=>{ if(e.target.closest('a')) return; toggle(); });
     card.addEventListener('keydown', e=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); toggle(); } });
   });
