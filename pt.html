@@ -461,7 +461,7 @@ html,body{overflow-x:clip}
 .contact-icons .icon:hover,.contact-icons .icon:focus-visible{color:var(--accent-2)}
 
 /* about objects: no captions, grow on hover, card only when chosen */
-.obj span{display:none}
+.obj span{position:absolute!important;width:1px!important;height:1px!important;overflow:hidden!important;clip:rect(0 0 0 0)!important;white-space:nowrap!important;padding:0!important;margin:-1px!important}
 .obj{padding:10px;border-radius:22px}
 .obj svg{width:92px;height:92px;transition:transform .25s cubic-bezier(.2,.7,.2,1)}
 .obj:hover{transform:none}
