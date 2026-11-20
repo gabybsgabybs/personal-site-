@@ -584,6 +584,37 @@ section[id]{scroll-margin-top:calc(var(--navh) + 14px)}
   html{scroll-behavior:auto}
 }
 </style>
+
+<style id="dark-mode-and-flip-2026-11-20">
+/* ============================================================
+   DARK MODE + FLIP CARDS — 2026-11-20
+   1. The paper cards (.face, .about-card.hand) keep their light palette in
+      both themes, but their text inherited the dark-theme colour: headings
+      and body copy came out near-white on cream. They now use the paper
+      palette for text as well.
+   2. The contact eyebrow was set to a green on a green panel (1.9:1).
+   3. On iOS the flipped card showed the front illustration mirrored on top
+      of the back text: -webkit-backface-visibility is unreliable inside
+      preserve-3d, so the inactive face is hidden outright.
+   ============================================================ */
+
+/* --- paper cards: text follows the paper, not the page theme --- */
+.face{color:var(--ink)}
+
+/* --- about card: the dark override missed the secondary ink --- */
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]) .about-card.hand{--ink-2:#5C6157;--line:rgba(35,38,32,.18)}
+}
+:root[data-theme="dark"] .about-card.hand{--ink-2:#5C6157;--line:rgba(35,38,32,.18)}
+
+/* --- contact eyebrow: readable on the green panel again --- */
+.contact .eyebrow{color:rgba(255,252,245,.78)}
+
+/* --- flip cards: never paint the hidden face --- */
+.flip .face.back{visibility:hidden}
+.flip.flipped .face.front{visibility:hidden}
+.flip.flipped .face.back{visibility:visible}
+</style>
 </head>
 <body>
 
